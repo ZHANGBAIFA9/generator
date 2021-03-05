@@ -1,0 +1,22 @@
+server:
+   port: 9090
+   compression:
+      enabled: true
+      mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+spring:
+   freemarker:
+      suffix: .html
+   datasource:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/seckill?useUnicode=true&characterEncoding=utf-8&useSSL=false&AllowPublicKeyRetrieval=True&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+   application:
+      name: jdbc-creater
+
+# mybatis 配置
+mybatis-plus:
+  # 配置mapper.xml映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  # 配置mybatis数据返回类型别名（默认别名就是类名）
+  type-aliases-package: com.generator.pojo
